@@ -10,6 +10,13 @@ setup env
 npm run migration:run
 
 npm run start:dev
+
+```
+
+## URL API Docs or Swagger
+
+```bash
+http://localhost:3000/docs
 ```
 
 ## Database utils

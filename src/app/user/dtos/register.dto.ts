@@ -20,6 +20,7 @@ export class RegisterDto {
   @ApiProperty()
   fullName: string;
 
+  @IsNotExist(User, "email")
   @IsEmail()
   @IsNotEmpty()
   @ApiProperty()
