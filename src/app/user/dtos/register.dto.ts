@@ -1,5 +1,5 @@
 import { IsAlphanumeric, IsEmail, IsNotEmpty, IsOptional, IsString, IsUUID, Length } from "class-validator";
-import { ApiProperty } from "@nestjs/swagger";
+import { ApiProperty, ApiPropertyOptional } from "@nestjs/swagger";
 import { Media } from "@src/database/entities/media.entity";
 import { IsExist } from "@src/common/validators/is-exist.decorator";
 import { IsNotExist } from "@src/common/validators/is-not-exist.decorator";
@@ -39,6 +39,6 @@ export class RegisterDto {
   @IsExist(Media, "id")
   @IsUUID()
   @IsOptional()
-  @ApiProperty()
+  @ApiPropertyOptional()
   photoMediaId: string;
 }
